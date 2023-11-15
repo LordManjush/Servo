@@ -27,19 +27,23 @@ namespace Servo
                 file.close();
             }
         }
-        
+
         void Str_SaveToFile(std::string FileName, std::vector<std::string> data, bool ClearAll)
         {
             std::fstream file;
+            file.open(FileName, std::ios::out);
+            if(file.is_open())
+            {
+                file << "";
+                file.close();
+            }
             if(!ClearAll)
             {
                 file.open(FileName, std::ios::app);
-                file.clear();
             }
             if(ClearAll)
             {
                 file.open(FileName, std::ios::out);
-                file.clear();
             }
 
             if(file.is_open())
@@ -55,15 +59,20 @@ namespace Servo
         void Fl_SaveToFile(std::string FileName, std::vector<float> data, bool ClearAll)
         {
             std::fstream file;
+            file.open(FileName, std::ios::out);
+            if(file.is_open())
+            {
+                file << "";
+                file.close();
+            }
+
             if(!ClearAll)
             {
                 file.open(FileName, std::ios::app);
-                file.clear();
             }
             if(ClearAll)
             {
                 file.open(FileName, std::ios::out);
-                file.clear();
             }
 
             if(file.is_open())
@@ -79,15 +88,20 @@ namespace Servo
         void Bo_SaveToFile(std::string FileName, std::vector<bool> data, bool ClearAll)
         {
             std::fstream file;
+
+            file.open(FileName, std::ios::out);
+            if(file.is_open())
+            {
+                file << "";
+                file.close();
+            }
             if(!ClearAll)
             {
                 file.open(FileName, std::ios::app);
-                file.clear();
             }
             if(ClearAll)
             {
                 file.open(FileName, std::ios::out);
-                file.clear();
             }
 
             if(file.is_open())
@@ -100,4 +114,6 @@ namespace Servo
             }
         }
     };
+
 }
+
