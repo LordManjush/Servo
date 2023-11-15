@@ -17,12 +17,11 @@ Here is an example on the setup
 #include "Servo.h"
 
 int main() {
-    Servo::Basic basic;
-    basic.CreateFile("Example.examplefile");
+    Servo::Basic::CreateFile("Example.examplefile");
     return 0;
 }
 ```
-The struct Basics contain lots of basic stuff to save and load;
+The namespace Basics contain lots of basic stuff to save and load;
 use ```Servo::Basic```
 In basics you need to use vectors for example to save a bunch of strings you need to
 ```cpp
@@ -31,15 +30,14 @@ In basics you need to use vectors for example to save a bunch of strings you nee
 std::vector<string> input;
 
 int main() {
-    Servo::Basic basic;
     input.push_back("Won");
     input.push_back("Failed);
     input.push_back("Lord");
-    basic.Str_SaveToFile("Example.pkg", input, false);
+    Servo::Basic::Str_SaveToFile("Example.pkg", input, false);
     return 0;
 }
 ```
-The ``` basic.Str_SaveToFile(string, vector<string>, bool); ```
+The ```Servo::Basic::Str_SaveToFile(string, vector<string>, bool); ```
 Contains takes three things 
 * string -> fileName;
 * bool -> to clear the file when pushback
@@ -47,7 +45,7 @@ Contains takes three things
 
 
 To load the data from the file use 
-``` basic.ReadFromFile();```
+``` Servo::Basic::ReadFromFile();```
 
 Example code 
 
@@ -57,8 +55,8 @@ Example code
 std::vector<std::string> output;
 
 int main() {
-    Servo::Basic basic;
-    basic.ReadFromFile("Example.pkg", outPut);
+    
+    Servo::Basic::ReadFromFile("Example.pkg", outPut);
     return 0;
 }
 ```
@@ -70,7 +68,7 @@ To print the outPut just do
 std::vector<std::string> output;
 
 int main() {
-    Servo::Basic basic;
+   
        for(auto& str : output)
        {
            std::cout << str;
