@@ -32,10 +32,9 @@ std::vector<string> input;
 
 int main() {
     Servo::Basic basic;
-    basic.CreateFile("Example.examplefile");
     input.push_back("Won");
     input.push_back("Failed);
-    input.push_back("Lord);
+    input.push_back("Lord");
     basic.Str_SaveToFile("Example.pkg", input, false);
     return 0;
 }
