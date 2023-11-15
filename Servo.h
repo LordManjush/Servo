@@ -10,10 +10,10 @@ namespace Servo
         {
             std::fstream file;
             file.open(FileName);
-if(file.is_open())
+            if(file.is_open())
             {
-file.close();
-}
+               file.close();
+            }
         }
         void ReadFromFile(std::string FileName, std::vector<std::string>& data)
         {
