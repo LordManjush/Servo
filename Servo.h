@@ -4,8 +4,8 @@
 
 namespace Servo
 {
-    struct Basic{
-    public:
+    namespace Basic{
+    
         void CreateFile(std::string FileName)
         {
             std::fstream file;
@@ -116,8 +116,6 @@ namespace Servo
 
                 file.close();
             }
-        }
-    };
-
+        } 
 }
 
