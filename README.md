@@ -17,7 +17,7 @@ Here is an example on the setup
 #include "Servo.h"
 
 int main() {
-    Servo::Basic::CreateFile("Example.pkg");
+    Servo::CreateFile("Example.pkg");
     return 0;
 }
 ```
