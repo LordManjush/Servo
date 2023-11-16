@@ -31,7 +31,7 @@ std::vector<string> input;
 
 int main() {
     input.push_back("Won");
-    input.push_back("Failed);
+    input.push_back("Failed");
     input.push_back("Lord");
     Servo::Basic::Str_SaveToFile("Example.pkg", input, false);
     return 0;
