@@ -60,8 +60,38 @@ int main() {
     return 0;
 }
 ```
+There is both bool and float save.
+In bool the data is saved as 0 or 1.
+
+Example Code Bool
+```cpp
+#include "Servo.h"
+
+std::vector<bool> input;
+int main() {
+   // basic.CreateFile("Example.pkg");
+   input.push_back(true);
+   input.push_back(false);
+   Servo::Basic::Bo_SaveToFile("Example.pkg", input, false);
+   return 0;
+}
+```
+
+Example Code Float
+```cpp
+#include "Servo.h"
+
+std::vector<float> input;
+int main() {
+   // basic.CreateFile("Example.pkg");
+   input.push_back(8008);
+   input.push_back(101010101010101010);
+   Servo::Basic::Bo_SaveToFile("Example.pkg", input, false);
+   return 0;
+}
+```
 The function adds all the data to the outPut.
-To print the outPut just do
+To print the outPut just do.
 ```cpp
 #include "Servo.h"
 
